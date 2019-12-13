@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">PubChem Mobile</string>
+	<string name="app_name_welcome">Welcome</string>
+	<string name="app_name_compound_detail">Compound</string>
+	<string name="app_name_my_search">My Searches</string>
+	<string name="app_name_my_compound">My Compounds</string>
+	<string name="app_name_compound_sort">Sort By</string>
+
+	<string name="search">Search</string>
+	<string name="clear">Clear</string>
+	<string name="loading">Loading...</string>
+	<string name="go">Go!</string>
+	<string name="run">Run</string>
+
+	<string name="url_root">http://www.bioinfomobile.com</string>
+	<string name="url_rootvv">http://152.144.16.187/pubmed</string>
+	<string name="url_rootcc">http://192.168.2.3/pubmed</string>
+	<string name="url_pubchem_device">/m/pubmed/doDevice.php</string>
+
+	<string name="menu_back">Back</string>
+	<string name="menu_pubchem_my_search">My Searches</string>
+	<string name="menu_pubchem_my_compound">My compounds</string>
+
+	<string name="menu_save_compound">Save</string>
+	<string name="menu_email_compound">Email</string>
+	<string name="menu_save_compounds">Save compounds</string>
+	<string name="menu_email_compounds">Email compounds</string>
+	<string name="menu_sort_compound">Sort</string>
+	<string name="menu_save_search">Save Search</string>
+
+	<string name="menu_select_all">Select All</string>
+	<string name="menu_delete">Delete</string>
+
+
+	<string name="pubchem_create_date">Create Date</string>
+	<string name="pubchem_create_date_from_hint">from date</string>
+	<string name="pubchem_create_date_to_hint">to date</string>
+	<string name="pubchem_from">from</string>
+	<string name="pubchem_to">to</string>
+	<string name="pubchem_search_term_hint">names or keywords, e.g. tylenol</string>
+	<string name="pubchem_stere_chirality">
+		Stereochemistry: Chirality
+	</string>
+	<string name="pubchem_stere_ez">Stereochemistry: E/Z</string>
+	<string name="pubchem_bioassay">BioAssays</string>
+	<string name="pubchem_chemical_properties">
+		Chemical Properties
+	</string>
+	<string name="pubchem_elements">Elements</string>
+
+	<string name="list_compound_result">Results</string>
+	<string name="list_compound_row_CID">CID:</string>
+	<string name="list_compound_row_iupac">IUPAC:</string>
+	<string name="list_compound_row_mw">MW:</string>
+	<string name="list_compound_row_tested_in_assay">BioAssays:</string>
+
+	<string name="list_loading">Loading...</string>
+	
+	<string name="sort_by_cid">CID</string>
+	<string name="sort_by_iupac">IUPAC Name</string>
+	<string name="sort_by_date_created">Date Created</string>
+	<string name="sort_by_mol_weight">Molecular Weight</string>
+	
+	<string name="welcome_title">Tips</string>
+
+</resources>

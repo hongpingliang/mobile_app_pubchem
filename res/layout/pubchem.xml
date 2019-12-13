@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/com.bim.pubchem"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:id="@+id/pubchem" android:orientation="vertical">
+
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_alignParentBottom="true"
+		android:id="@+id/pubchem_button_layout"
+		android:layout_centerHorizontal="true" android:orientation="vertical"
+		android:layout_height="wrap_content">
+		
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:orientation="horizontal"
+			android:paddingTop="5dip" android:background="@color/gray">
+
+			<View android:layout_width="0dip"
+				android:layout_height="0dip" android:layout_weight="0.2" />
+
+			<Button android:id="@+id/pubchem_button_clear"
+				android:text="@string/clear" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_weight="0.2" />
+
+			<View android:layout_width="0dip"
+				android:layout_height="0dip" android:layout_weight="0.2" />
+
+
+			<Button android:id="@+id/pubchem_button_search"
+				android:text="@string/search" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:layout_weight="0.2" />
+
+			<View android:layout_width="0dip"
+				android:layout_height="0dip" android:layout_weight="0.2" />
+		</LinearLayout>
+		
+		<!-- Place an AdMob ad at the bottom of the screen. -->
+		<!-- It has white text on a black background. -->
+		<!-- The description of the surrounding context is 'Android game'. -->
+		<com.admob.android.ads.AdView android:id="@+id/ad"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" app:backgroundColor="#000000"
+			app:primaryTextColor="#FFFFFF" app:secondaryTextColor="#CCCCCC"
+			app:keywords="restaurant,coupon" />
+	</LinearLayout>
+
+	<ScrollView android:layout_width="fill_parent"
+		android:layout_above="@+id/pubchem_button_layout"
+		android:layout_height="fill_parent" android:background="@color/white"
+		android:textColor="@color/black">
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:orientation="vertical"
+			android:paddingTop="5dip" android:paddingLeft="2dip"
+			android:paddingBottom="30dip" android:paddingRight="6dip">
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="wrap_content">
+
+				<EditText android:id="@+id/pubchem_search_term_text"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content" android:padding="3dip"
+					android:text="" android:scrollHorizontally="true"
+					android:hint="@string/pubchem_search_term_hint"
+					android:imeOptions="actionDone" />
+			</LinearLayout>
+
+
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/pubchem_create_date"
+				android:textColor="@color/gray" android:layout_marginLeft="5dip" />
+
+			<LinearLayout android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center_vertical|center_horizontal">
+
+				<Button
+					android:id="@+id/pubchem_create_date_from_button" android:text=""
+					android:layout_width="110dip" android:layout_height="wrap_content"
+					android:hint="@string/pubchem_create_date_from_hint" />
+
+				<Button android:id="@+id/pubchem_create_date_to_button"
+					android:layout_marginLeft="25dip" android:text=""
+					android:layout_width="110dip"
+					android:hint="@string/pubchem_create_date_to_hint"
+					android:layout_height="wrap_content" />
+
+			</LinearLayout>
+
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="15dip"
+				android:text="@string/pubchem_stere_chirality"
+				android:textColor="@color/gray" android:layout_marginLeft="5dip" />
+
+			<Spinner android:id="@+id/pubchem_stere_chirality_spinner"
+				android:layout_width="220dip" android:layout_height="wrap_content"
+				android:drawSelectorOnTop="false"
+				android:prompt="@string/pubchem_stere_chirality"
+				android:layout_gravity="center_horizontal" />
+
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="15dip"
+				android:text="@string/pubchem_stere_ez"
+				android:textColor="@color/gray" android:layout_marginLeft="5dip" />
+
+			<Spinner android:id="@+id/pubchem_stere_ez_spinner"
+				android:layout_width="220dip" android:layout_height="wrap_content"
+				android:drawSelectorOnTop="false"
+				android:prompt="@string/pubchem_stere_ez"
+				android:layout_gravity="center_horizontal" />
+
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="15dip"
+				android:text="@string/pubchem_bioassay"
+				android:textColor="@color/gray" android:layout_marginLeft="5dip" />
+
+			<Spinner android:id="@+id/pubchem_bioassay_spinner"
+				android:layout_width="220dip" android:layout_height="wrap_content"
+				android:drawSelectorOnTop="false"
+				android:prompt="@string/pubchem_bioassay"
+				android:layout_gravity="center_horizontal" />
+
+
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="15dip"
+				android:text="@string/pubchem_elements"
+				android:textColor="@color/gray" android:layout_marginLeft="5dip" />
+
+			<Spinner android:id="@+id/pubchem_element_spinner"
+				android:layout_width="220dip" android:layout_height="wrap_content"
+				android:drawSelectorOnTop="false"
+				android:prompt="@string/pubchem_elements"
+				android:layout_gravity="center_horizontal" />
+
+
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="15dip"
+				android:text="@string/pubchem_chemical_properties"
+				android:textColor="@color/gray" android:layout_marginLeft="5dip" />
+
+			<TableLayout android:layout_width="wrap_content"
+				android:layout_gravity="center_horizontal"
+				android:layout_height="wrap_content">
+
+				<TableRow>
+					<View />
+
+					<TextView android:layout_marginLeft="28dip"
+						android:textSize="12dp" android:text="@string/pubchem_from" />
+
+					<TextView android:layout_marginLeft="38dip"
+						android:textSize="12dp" android:text="@string/pubchem_to" />
+
+				</TableRow>
+
+				<TableRow>
+					<TextView android:text="MolecularWeight"
+						android:textSize="13dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText
+						android:id="@+id/pubchem_field_MolecularWeight_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText
+						android:id="@+id/pubchem_field_MolecularWeight_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+
+				<TableRow>
+					<TextView android:text="XLogP"
+						android:textSize="13dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText android:id="@+id/pubchem_field_XLogP_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText android:id="@+id/pubchem_field_XLogP_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+				<TableRow>
+					<TextView android:text="HydrogenBondDonorCount"
+						android:textSize="11dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText
+						android:id="@+id/pubchem_field_HydrogenBondDonorCount_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText
+						android:id="@+id/pubchem_field_HydrogenBondDonorCount_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+				<TableRow>
+					<TextView android:text="HydrogenBondAcceptorCount"
+						android:textSize="10dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText
+						android:id="@+id/pubchem_field_HydrogenBondAcceptorCount_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText
+						android:id="@+id/pubchem_field_HydrogenBondAcceptorCount_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+				<TableRow>
+					<TextView android:text="RotatableBondCount"
+						android:textSize="13dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText
+						android:id="@+id/pubchem_field_RotatableBondCount_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText
+						android:id="@+id/pubchem_field_RotatableBondCount_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+				<TableRow>
+					<TextView android:text="TPSA"
+						android:textSize="13dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText android:id="@+id/pubchem_field_TPSA_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText android:id="@+id/pubchem_field_TPSA_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+				<TableRow>
+					<TextView android:text="HeavyAtomCount"
+						android:textSize="13dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText
+						android:id="@+id/pubchem_field_HeavyAtomCount_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText
+						android:id="@+id/pubchem_field_HeavyAtomCount_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+				<TableRow>
+					<TextView android:text="IsotopeAtomCount"
+						android:textSize="13dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText
+						android:id="@+id/pubchem_field_IsotopeAtomCount_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText
+						android:id="@+id/pubchem_field_IsotopeAtomCount_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+				<TableRow>
+					<TextView android:text="TautomerCount"
+						android:textSize="13dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText
+						android:id="@+id/pubchem_field_TautomerCount_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText
+						android:id="@+id/pubchem_field_TautomerCount_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+				<TableRow>
+					<TextView android:text="CovalentUnitCount"
+						android:textSize="13dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText
+						android:id="@+id/pubchem_field_CovalentUnitCount_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText
+						android:id="@+id/pubchem_field_CovalentUnitCount_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+				<TableRow>
+					<TextView android:text="Complexity"
+						android:textSize="13dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText
+						android:id="@+id/pubchem_field_Complexity_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText
+						android:id="@+id/pubchem_field_Complexity_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+				<TableRow>
+					<TextView android:text="TotalFormalCharge"
+						android:textSize="13dp" android:textColor="@color/gray_darker"
+						android:layout_gravity="right|center_vertical" />
+					<EditText
+						android:id="@+id/pubchem_field_TotalFormalCharge_from"
+						android:layout_width="80dip" android:imeOptions="actionDone"
+						android:inputType="numberDecimal" />
+					<EditText
+						android:id="@+id/pubchem_field_TotalFormalCharge_to"
+						android:layout_marginLeft="12dip" android:layout_width="80dip"
+						android:imeOptions="actionDone" android:inputType="numberDecimal" />
+				</TableRow>
+
+
+			</TableLayout>
+		</LinearLayout>
+
+	</ScrollView>
+
+</RelativeLayout>

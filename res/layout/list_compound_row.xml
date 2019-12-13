@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:paddingRight="5dip" android:id="@+id/list_row_compound"
+	android:paddingBottom="15dip" android:orientation="vertical"
+	android:background="@color/white" android:textColor="@color/black">
+
+	<LinearLayout android:id="@+id/list_row_loading_view"
+		android:visibility="gone" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:paddingLeft="5dip"
+		android:paddingTop="10dip" android:paddingBottom="20dip">
+
+		<TextView android:id="@+id/list_row_load"
+			android:layout_width="wrap_content" android:text="@string/loading"
+			android:textColor="@color/black"
+			android:layout_height="wrap_content" />
+
+	</LinearLayout>
+
+	<LinearLayout android:id="@+id/list_row_data_view"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		android:orientation="vertical" android:paddingLeft="5dip"
+		android:paddingTop="3dip" android:paddingBottom="1dip">
+
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<TextView android:id="@+id/list_row_compound_cid"
+				android:layout_width="wrap_content" android:text="CID: 1983"
+				android:layout_height="wrap_content" android:textStyle="bold"
+				android:layout_gravity="center_vertical" android:textSize="18sp"
+				android:textColor="@color/solid_blue" />
+
+			<View android:layout_width="0dip"
+				android:layout_height="0dip" android:layout_weight="1" />
+
+			<TextView android:id="@+id/list_row_compound_created_date"
+				android:layout_width="wrap_content" android:textColor="@color/gray"
+				android:paddingTop="3dip" android:paddingRight="5dip"
+				android:text="Created: 2004/09/16"
+				android:layout_height="wrap_content" android:textSize="13sp" />
+		</LinearLayout>
+
+		<TextView android:id="@+id/list_row_compound_synonym"
+			android:layout_width="wrap_content" android:textColor="@color/black"
+			android:paddingTop="3dip" android:paddingLeft="5dip"
+			android:text="acetaminophen; Paracetamol; Tylenol ..."
+			android:layout_height="wrap_content" android:textSize="13sp" />
+
+		<TextView android:id="@+id/list_row_compound_iupac"
+			android:layout_width="wrap_content" android:textColor="@color/black"
+			android:paddingTop="3dip" android:paddingLeft="5dip"
+			android:text="IUPAC: N-(4-hydroxyphenyl)acetamide"
+			android:layout_height="wrap_content" android:textSize="13sp" />
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<TextView android:id="@+id/list_row_compound_molWeight"
+				android:paddingTop="1dip" android:textColor="@color/black"
+				android:layout_width="wrap_content" android:text="MW: 334.22"
+				android:paddingLeft="5dip" android:layout_height="wrap_content"
+				android:textSize="13sp" />
+
+
+
+			<TextView android:id="@+id/list_row_compound_formula"
+				android:layout_width="wrap_content" android:textColor="@color/black"
+				android:paddingTop="3dip" android:paddingLeft="35dip"
+				android:text="MF: CH3CH2" android:layout_height="wrap_content"
+				android:textSize="13sp" />
+		</LinearLayout>
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/list_row_compound_assay_layout">
+
+			<TextView android:paddingTop="1dip"
+				android:textColor="@color/black" android:layout_width="wrap_content"
+				android:text="@string/list_compound_row_tested_in_assay"
+				android:paddingLeft="5dip" android:layout_height="wrap_content"
+				android:textSize="13sp" />
+
+			<TextView android:id="@+id/list_row_compound_assay_all"
+				android:paddingTop="1dip" android:textColor="@color/black"
+				android:layout_width="wrap_content" android:text="All: 211"
+				android:paddingLeft="5dip" android:layout_height="wrap_content"
+				android:textSize="13sp" />
+
+
+			<TextView android:id="@+id/list_row_compound_assay_active"
+				android:paddingTop="1dip" android:textColor="@color/black"
+				android:layout_width="wrap_content" android:text="Active: 6"
+				android:paddingLeft="35dip" android:layout_height="wrap_content"
+				android:textSize="13sp" />
+
+		</LinearLayout>
+
+		<TextView android:id="@+id/list_row_compound_pharmAction"
+			android:layout_width="wrap_content" android:textColor="@color/black"
+			android:paddingTop="3dip" android:paddingLeft="5dip"
+			android:text="Analgesics, Non-Narcotic..."
+			android:layout_height="wrap_content" android:textSize="13sp" />
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:paddingTop="5dip">
+
+			<CheckBox android:id="@+id/list_article_checkbox"
+				android:text="" android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_gravity="bottom" />
+
+			<View android:layout_width="0dip"
+				android:layout_height="0dip" android:layout_weight="1" />
+
+			<ImageButton android:id="@+id/list_row_compound_image"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/app_icon"
+				android:layout_gravity="center_vertical|center_horizontal" />
+		</LinearLayout>
+	</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:id="@+id/menu_list_compound_save_compound"
+		android:icon="@drawable/menu_save_compound"
+		android:title="@string/menu_save_compounds" />
+
+
+	<item android:id="@+id/menu_list_compound_email_compound"
+		android:icon="@drawable/menu_email"
+		android:title="@string/menu_email_compounds" />
+
+
+	<item android:id="@+id/menu_list_compound_back"
+		android:icon="@drawable/menu_back" 
+		android:title="@string/menu_back" />
+		
+	<item android:id="@+id/menu_list_compound_sort"
+		android:icon="@drawable/menu_sort" 
+		android:title="@string/menu_sort_compound" />	
+		
+	<item android:id="@+id/menu_list_compound_save_search"
+		android:icon="@drawable/menu_pubchem_my_search" 
+		android:title="@string/menu_save_search" />			
+		
+
+</menu>
